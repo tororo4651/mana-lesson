@@ -1,0 +1,6 @@
+# ファイル
+.DS_Store
+Thumbs.db
+*.code-workspace
+style.css
+style.css.map
