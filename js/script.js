@@ -1,15 +1,20 @@
-const heading = document.querySelector('#heading');
+const texts = document.getElementsByClassName('text');
 
-const keyframes = {
-  backgroundPosition: ['right top', 'left top'],
-  color: ['rgb(255 255 255 / 0%)', 'rgb(255 255 255 / 100%)']
-};
-
-const options = {
-  duration: 1000,
-  easing: 'ease',
-  fill: 'forwards'
-};
+const images = document.getElementsByTagName('img');
+const images2 = document.querySelectorAll('img');
 
 
-heading.animate(keyframes, options);
+images.forEach((image, index, array) => {
+  image.addEventListener('mouseover', function() {
+    texts[0].innerText = this.alt;
+
+    this.animate(
+      {
+        opacity: [0, 1]
+      },
+      {
+        duration: 500
+      }
+    );
+  }, false);
+});
