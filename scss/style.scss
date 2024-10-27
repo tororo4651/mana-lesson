@@ -1,34 +1,24 @@
-body {
-  padding: 3rem 1rem;
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+}
+
+h1,
+h2 {
+  margin: 40rem 0 1rem;
 }
 
 
-.text {
+.scroll {
+  position: relative;
   width: fit-content;
-  padding: 0.5rem 1rem;
-  margin-inline: auto;
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  border-radius: 8px;
-}
+  overflow: hidden;
 
-.gallery {
-  max-width: 48rem;
-  margin-top: 2rem;
-  margin-inline: auto;
-  display: grid;
-  grid-template-columns:
-    repeat(auto-fit, minmax(4rem, 1fr));
-  gap: 30px;
-
-  img {
-    width: 100%;
-    cursor: pointer;
-    transition: box-shadow .5s;
-
-    &:hover {
-      box-shadow: 0 5px 15px rgb(0 0 0 / 50%);
-    }
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #ed8;
   }
 }
