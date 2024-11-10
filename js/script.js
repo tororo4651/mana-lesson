@@ -1,57 +1,12 @@
-const slideLeft = (entries, obs) => {
+const textarea = document.querySelector('textarea');
+const count = document.querySelector('.count');
 
-  for (let i = 0; i < entries.length; i++) {
-    if (entries[i].isIntersecting) {
-      entries[i].target.animate(
-        {
-          translate: [0, '100%']
-        },
-        {
-          duration: 2000,
-          pseudoElement: '::after',
-          easing: 'ease',
-          fill: 'forwards'
-        }
-      );
+textarea.addEventListener('input', function(e) {
+  count.textContent = this.value.length;
 
-      obs.unobserve(entries[i].target);
-    }
+  if (this.value.length > 100) {
+    count.classList.add('is-warning');
+  } else {
+    count.classList.remove('is-warning');
   }
-
-
-
-  // entries.forEach((entry, index, array) => {
-  //   // console.log(entry);
-  //   if (entry.isIntersecting) {
-  //     entry.target.animate(
-  //       {
-  //         translate: [0, '100%']
-  //       },
-  //       {
-  //         duration: 2000,
-  //         pseudoElement: '::after',
-  //         easing: 'ease',
-  //         fill: 'forwards'
-  //       }
-  //     );
-
-  //     obs.unobserve(entry.target);
-  //   }
-  // });
-
-};
-
-
-const slideLeftObserver = new IntersectionObserver(slideLeft);
-
-
-const slideLeftElements = document.getElementsByClassName('scroll');
-
-for (let i = 0; i < slideLeftElements.length; i++) {
-  slideLeftObserver.observe(slideLeftElements[i]);
-}
-
-
-// slideLeftElements.forEach((slideLeftElement, index, array) => {
-//   slideLeftObserver.observe(slideLeftElement);
-// });
+}, false);
