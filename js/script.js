@@ -1,12 +1,13 @@
-const textarea = document.querySelector('textarea');
-const count = document.querySelector('.count');
+const bar = document.getElementById('bar');
 
-textarea.addEventListener('input', function(e) {
-  count.textContent = this.value.length;
 
-  if (this.value.length > 100) {
-    count.classList.add('is-warning');
-  } else {
-    count.classList.remove('is-warning');
-  }
-}, false);
+const getScrollPercentage = (e) => {
+  const pageHeight = document.documentElement.scrollHeight;
+  const viewHeight = document.documentElement.clientHeight;
+  const scrolled = window.scrollY;
+
+  bar.style.width = `${scrolled / (pageHeight - viewHeight) * 100}%`;
+};
+
+
+window.addEventListener('scroll', getScrollPercentage, false);
