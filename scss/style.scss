@@ -1,17 +1,12 @@
-article {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-  line-height: 1.8;
+body {
+  padding: 1rem;
 }
 
-h2 {
-  margin: 2rem 0 1rem;
+h1 {
+  margin-block: 50vh;
+  text-align: center;
 }
 
-
-#bar {
-  position: fixed;
-  height: 10px;
-  background-color: #0bd;
+img {
+  width: 100%;
 }
