@@ -1,12 +1,25 @@
 body {
-  padding: 1rem;
+  padding: 3rem 1rem;
+  background-repeat: repeat;
 }
 
-h1 {
-  margin-block: 50vh;
-  text-align: center;
-}
+.gallery {
+  max-width: 40rem;
+  margin-inline: auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: rgb(255 255 255 / .4);
+  backdrop-filter: blur(10px);
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(3rem, 1fr));
+  gap: 2rem;
 
-img {
-  width: 100%;
+  img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    box-shadow: 0 0 1rem rgb(0 0 0 / 0.3);
+    cursor: pointer;
+  }
 }

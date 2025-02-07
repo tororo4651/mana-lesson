@@ -1,27 +1,14 @@
-const slideLeft = (entries, obs) => {
-  entries.forEach((entry, index, array) => {
+const patterns = document.querySelectorAll('img');
 
-    console.log(entry);
+patterns.forEach((pattern, index, array) =>{
+  pattern.addEventListener('mouseover', (e) => {
+    document.body.style.backgroundImage = `url(${e.target.src})`;
 
-    if (entry.isIntersecting) {
-      entry.target.animate(
-        {
-          translate: ['100% 0', 0]
-        },
-        1000
-      );
-
-      obs.unobserve(entry.target);
-    }
-  });
-};
-
-
-const slideLeftObserver = new IntersectionObserver(slideLeft);
-
-
-const images = document.querySelectorAll('img');
-
-images.forEach((image, index, array) => {
-  slideLeftObserver.observe(image);
+    pattern.animate(
+      {
+        opacity: [0, 1]
+      },
+      500
+    );
+  }, false);
 });
