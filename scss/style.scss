@@ -1,25 +1,24 @@
-body {
-  padding: 3rem 1rem;
-  background-repeat: repeat;
+h1,
+h2,
+p {
+  margin-bottom: 1rem;
 }
 
-.gallery {
-  max-width: 40rem;
-  margin-inline: auto;
+h2 {
+  margin-top: 2em;
+}
+
+.container {
+  max-width: 800px;
   padding: 2rem;
-  border-radius: 1rem;
-  background-color: rgb(255 255 255 / .4);
+  margin-inline: auto;
+}
+
+#loading {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(238, 221, 136, 1);
   backdrop-filter: blur(10px);
   display: grid;
-  grid-template-columns:
-    repeat(auto-fit, minmax(3rem, 1fr));
-  gap: 2rem;
-
-  img {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    box-shadow: 0 0 1rem rgb(0 0 0 / 0.3);
-    cursor: pointer;
-  }
+  place-content: center;
 }
