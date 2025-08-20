@@ -1,37 +1,67 @@
-const loading = document.getElementById('loading');
-const loadingText = document.querySelector('#loading p');
+const juices = [
+  {
+    name: 'イチゴ',
+    image: 'strawberry.jpg',
+    price: '450'
+  },
+  {
+    name: 'ライム',
+    image: 'lime.jpg',
+    price: '400'
+  },
+  {
+    name: 'マンゴー',
+    image: 'mango.jpg',
+    price: '500'
+  },
+  {
+    name: 'レモン',
+    image: 'lemon.jpg',
+    price: '400'
+  },
+  {
+    name: 'イチジク',
+    image: 'fig.jpg',
+    price: '500'
+  },
+  {
+    name: 'リンゴ',
+    image: 'apple.jpg',
+    price: '400'
+  }
+];
 
-const keyframes = {
-  opacity: [1, 0]
-};
 
-window.addEventListener('load', (e) => {
+const juiceList = document.querySelector('.juiceList');
 
-  loadingText.animate(
+
+juices.forEach((juice, index, array) => {
+
+  const { name, image, price } = juice;
+
+  const content =
+   `<li class="juiceList__item juiceCard">
+      <h2 class="juiceCard__heading">${name}</h2>
+
+      <img class="juiceCard__image" src="images/${image}" alt="">
+
+      <p class="juiceCard__price">${price}円</p>
+    </li>`;
+
+  juiceList.insertAdjacentHTML('beforeend', content);
+
+  const juiceCards = document.querySelectorAll('.juiceCard');
+
+  juiceCards[index].animate(
     {
-      opacity: [1, 0],
-      offset: [0.8, 1]
+      opacity: [0, 1]
     },
     {
-      duration: 2000,
-      // easing: 'ease',
-      fill: 'forwards'
+      duration: 1000,
+      delay: index * 500,
+      easing: 'ease',
+      fill: 'both'
     }
   );
 
-
-  // loading.animate(
-  //   {
-  //     backgroundColor: ['rgba(238, 221, 136, 1)', 'rgba(238, 221, 136, 0)'],
-  //     backdropFilter: ['blur(10px)', 'blur(0)'],
-  //     visibility: 'hidden'
-  //   },
-  //   {
-  //     duration: 2000,
-  //     delay: 1200,
-  //     easing: 'ease',
-  //     fill: 'forwards'
-  //   }
-  // );
-
-}, false);
+});

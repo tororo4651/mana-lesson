@@ -1,24 +1,33 @@
-h1,
-h2,
-p {
-  margin-bottom: 1rem;
+body {
+  text-align: center;
+  font-family: 'Kiwi Maru', serif;
+}
+
+.juiceList {
+  list-style-type: none;
+  max-width: 1020px;
+  padding: 30px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.juiceCard {
+  display: grid;
+
+  &__image {
+    width: 100%;
+    order: -1;
+  }
+}
+
+h1 {
+  margin: 30px 0;
+  font-size: 40px;
 }
 
 h2 {
-  margin-top: 2em;
-}
-
-.container {
-  max-width: 800px;
-  padding: 2rem;
-  margin-inline: auto;
-}
-
-#loading {
-  position: fixed;
-  inset: 0;
-  background-color: rgba(238, 221, 136, 1);
-  backdrop-filter: blur(10px);
-  display: grid;
-  place-content: center;
+  margin-top: 6px;
 }
