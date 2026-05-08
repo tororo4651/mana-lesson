@@ -16,8 +16,7 @@ textarea {
 
 #count {
   font-size: 1.5rem;
-
-  &.warning {
-    color: #f66;
-  }
 }
+#count.warning {
+  color: #f66;
+}/*# sourceMappingURL=style.css.map */
