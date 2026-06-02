@@ -1,0 +1,15 @@
+.grid {
+  max-width: 1020px;
+  margin: auto;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.img-item {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  opacity: 0;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="UTF-8">
+
+<title>Mathオブジェクトを使った数学的な計算</title>
+</head>
+
+
+<body>
+
+
+<script>
+
+console.log(Math.floor(9.28));
+// 小数点以下を、"切り下げ"。
+
+// 正の値のときは何も問題が無いと思うけど、Math.floor は名前の通り、下の方に寄せる関数なので整数部分が変わってしまう。
+// 日本語で切り捨てと言ってしまっているのが問題で、"切り下げ" と考えれば大丈夫そう。
+
+// Math.floor(100.1)
+// 100
+// Math.floor(-100.1)
+// -101
+
+
+
+console.log(Math.ceil(9.28));
+// 小数点以下を、"切り上げ"。
+
+// Math.ceil も天井、上に寄せる関数なので同じ現象が起きる。けど日本語だと小数点以下 切り上げ と呼ばれるので誤解は少ないかもしれない。
+
+// Math.ceil(100.1)
+// 101
+// Math.ceil(-100.1)
+// -100
+
+
+
+console.log(Math.trunc(9.28));
+// 小数点以下を、"切り捨て"。
+
+// 正負に関わらず整数部分は変わらない。
+// 一般的な金額の用途で「小数点以下切り捨ててほしい」ってだいたいこっちな気がする。
+
+// Math.trunc(100.1)
+// 100
+// Math.trunc(-100.1)
+// -100
+
+
+
+console.log(Math.round(9.28));
+
+
+
+console.log(Math.random());
+
+
+
+console.log(Math.pow(9, 2));
+// power ・・・・累乗（るいじょう）、べき乗。 の略。
+
+
+
+console.log(Math.max(9, 2, 8));
+
+
+
+console.log(Math.min(9, 2, 8));
+
+</script>
+
+
+
+
+</body>
+</html>

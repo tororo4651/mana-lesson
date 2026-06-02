@@ -1,0 +1,29 @@
+body {
+  font-family: 'Kiwi Maru', serif;
+  text-align: center;
+}
+
+#menu {
+  max-width: 1020px;
+  padding: 30px;
+  margin: auto;
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+h1 {
+  margin: 30px 0;
+  font-size: 40px;
+}
+
+h2 {
+  margin-top: 6px;
+}
