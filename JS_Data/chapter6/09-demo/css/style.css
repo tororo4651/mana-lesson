@@ -3,9 +3,9 @@
   padding: 30px;
   margin: auto;
   display: grid;
-  gap: 30px;
   grid-template-columns:
     repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
 }
 
 .img-item {

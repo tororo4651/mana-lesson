@@ -10,7 +10,7 @@ const keyframes = {
 };
 
 const options = {
-  duration: 8000,
+  duration: 4000,
   direction: 'alternate',
   iterations: Infinity,
 };

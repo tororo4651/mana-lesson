@@ -1,14 +1,17 @@
+const text = document.querySelector('.text');
 
-const heading = document.querySelector('#heading');
 
-const keyframes = {
-  color: ['transparent', '#fff'],
-  backgroundPosition: ['100% 0', 0]
-};
+const images = document.querySelectorAll('.gallery > img');
 
-const options = {
-  duration: 1000,
-  easing: 'ease'
-};
+images.forEach((image, index, array) => {
+  image.addEventListener('mouseover', (e) => {
+    text.textContent = e.target.alt;
 
-heading.animate(keyframes, options);
+    e.target.animate(
+      {
+        opacity: [0, 1]
+      },
+      500
+    );
+  }, false);
+});

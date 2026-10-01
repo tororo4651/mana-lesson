@@ -1,6 +1,7 @@
-const images = document.querySelectorAll('.gallery img');
 const text = document.querySelector('.text');
 
+
+const images = document.querySelectorAll('.gallery img');
 
 images.forEach((image) => {
   image.addEventListener('mouseover', (event) => {

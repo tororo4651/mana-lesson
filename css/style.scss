@@ -1,17 +1,33 @@
 body {
-  margin: 2rem;
+  padding: 1rem;
 }
 
 
-#heading {
-  width: fit-content;
-  margin-inline: auto;
+.text {
+  margin: 2rem auto;
   padding: 0.5rem 1rem;
-  background-size: 200% 100%;
-  background-image: linear-gradient(
-    90deg,
-    #0bd 50%,
-    #fff 50%
-  );
+  width: fit-content;
+  border-radius: .5rem;
+  background-color: #333;
   color: #fff;
+  text-align: center;
+}
+
+.gallery {
+  max-width: 48rem;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(4rem, 1fr));
+  gap: 2rem;
+
+  > img {
+    width: 100%;
+    cursor: pointer;
+    transition: 0.5s;
+
+    &:hover {
+      box-shadow: 0 .25rem 1rem rgba(0, 0 , 0, .5);
+    }
+  }
 }
